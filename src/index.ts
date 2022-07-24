@@ -1,6 +1,10 @@
 import * as a1lib from "@alt1/base";
 import BossHPReader from "./bosshpreader";
 
+//tell webpack to add index.html and appconfig.json to output
+require("!file-loader?name=[name].[ext]!./index.html");
+require("!file-loader?name=[name].[ext]!./appconfig.json");
+
 var output = document.getElementById("output");
 
 let b = new BossHPReader()
